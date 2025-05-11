@@ -21,376 +21,17 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-      :root {
-        --background-primary: #029cf6;
-      }
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html,
-      body {
-        width: 100%;
-        height: 100%;
-        font-family: "Montserrat", sans-serif;
-        -webkit-text-size-adjust: 100%;
-      }
-      .main {
-        overflow: hidden;
-        width: 100%;
-        height: 100dvh;
-        background-color: var(--background-primary);
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .hexagon-avatar-wrapper {
-        position: fixed;
-        top: 87px;
-        left: -67px;
-        z-index: 3;
-      }
-      .hexagon-group {
-        position: relative;
-      }
-      .hexagon-famale-position {
-        position: absolute;
-        bottom: -10em;
-        right: -5em;
-      }
-      .hexagon-male {
-        width: 481px;
-        height: 546px;
-        position: relative;
-      }
-      .hexagon-famale {
-        width: 365px;
-        height: 414px;
-        position: relative;
-      }
-      .hexagon-border {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #20e6f4;
-        width: calc(100% + 6px);
-        height: calc(100% + 6px);
-        -webkit-clip-path: url("#hexagon");
-        clip-path: url("#hexagon");
-      }
-      .hexagon-padding {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: var(--background-primary);
-        width: calc(100% + 30px);
-        height: calc(100% + 30px);
-        -webkit-clip-path: url("#hexagon");
-        clip-path: url("#hexagon");
-      }
-      .hexagon-line {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: calc(100% + 32px);
-        height: calc(100% + 32px);
-        background-color: #fcfefe;
-        -webkit-clip-path: url("#hexagon");
-        clip-path: url("#hexagon");
-      }
-      .hexagon-image {
-        width: 100%;
-        height: 100%;
-        -webkit-clip-path: url("#hexagon");
-        clip-path: url("#hexagon");
-      }
-      .hexagon-famale .hexagon-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        -webkit-user-drag: none;
-      }
-      .hexagon-male .hexagon-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        margin-left: 40px;
-        -webkit-user-drag: none;
-      }
-
-      /* plus */
-      .plus-top-group {
-        position: fixed;
-        width: 128px;
-        height: 128px;
-        top: 5%;
-        right: -1%;
-      }
-      .plus-bottom-group {
-        position: fixed;
-        width: 105px;
-        height: 105px;
-        bottom: -1%;
-        left: 50%;
-        opacity: 0.6;
-        z-index: 1;
-      }
-      /* end plus */
-
-      /* square */
-      .square {
-        position: fixed;
-        border-radius: 20%;
-        background-color: #f4f6f6;
-      }
-      .square-xxlarge {
-        width: 75px;
-        height: 76px;
-        opacity: 0.3;
-        top: 43%;
-        left: 51%;
-      }
-      .square-xlarge {
-        width: 61px;
-        height: 60px;
-        opacity: 0.1;
-        top: 20%;
-        left: 80%;
-      }
-      .square-large {
-        width: 60px;
-        height: 60px;
-        opacity: 0.2;
-        bottom: 20%;
-        left: 77%;
-      }
-      .square-medium {
-        width: 45px;
-        height: 45px;
-        bottom: 10%;
-        opacity: 0.3;
-        right: 30%;
-        z-index: 1;
-      }
-      .square-small {
-        width: 26px;
-        height: 26px;
-        opacity: 0.3;
-        bottom: 23%;
-        left: 70%;
-        z-index: 1;
-      }
-      /* end square */
-
-      /* content */
-      .content-section {
-        position: fixed;
-        top: 20%;
-        left: 55%;
-        max-width: 352px;
-        display: flex;
-        flex-direction: column;
-        gap: 12em;
-        z-index: 2;
-      }
-      .quote {
-        font-size: 28px;
-        line-height: 44px;
-        letter-spacing: 0%;
-        font-weight: 600;
-        line-height: 44px;
-        color: #ffffff;
-        -webkit-font-smoothing: antialiased;
-      }
-      .author-name {
-        font-size: 28px;
-        font-weight: 700;
-        color: #ffde05;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        -webkit-font-smoothing: antialiased;
-      }
-      .author-title {
-        color: #ffff;
-        font-size: 18px;
-        -webkit-font-smoothing: antialiased;
-      }
-      /* end content */
-
-      .hexagon-top {
-        position: absolute;
-        top: 1%;
-        left: 80%;
-        background-color: #07f9fe;
-        opacity: 0.3;
-        width: 147px;
-        height: 166px;
-        -webkit-clip-path: url("#hexagon");
-        clip-path: url("#hexagon");
-      }
-      .hexagon-middle {
-        position: fixed;
-        top: 50%;
-        left: 80%;
-        background-color: #032184;
-        opacity: 0.3;
-        width: 64px;
-        height: 72px;
-        z-index: 1;
-        -webkit-clip-path: url("#hexagon");
-        clip-path: url("#hexagon");
-      }
-      .hexagon-right {
-        position: fixed;
-        top: 30%;
-        right: -42.25px;
-        background-color: #032184;
-        opacity: 0.26;
-        width: 85px;
-        height: 96px;
-        z-index: 1;
-        -webkit-clip-path: url("#hexagon");
-        clip-path: url("#hexagon");
-      }
-      .hexagon-bottom {
-        position: fixed;
-        top: 60%;
-        left: -10%;
-        background-color: #032184;
-        opacity: 0.3;
-        width: 120vw;
-        aspect-ratio: 1;
-        -webkit-clip-path: url("#hexagon");
-        clip-path: url("#hexagon");
-        z-index: 1;
-      }
-
-      @media (max-width: 640px) {
-        /* avatar hexagon */
-        .hexagon-avatar-wrapper {
-          top: -15px;
-          left: -47px;
-        }
-        .hexagon-famale-position {
-          bottom: -7em;
-          right: -3em;
-        }
-        .hexagon-male {
-          width: 297px;
-          height: 337px;
-        }
-        .hexagon-famale {
-          width: 226px;
-          height: 256px;
-          box-sizing: border-box;
-        }
-        .hexagon-top {
-          top: 13%;
-          left: 90%;
-          width: 56px;
-          height: 63px;
-        }
-        .hexagon-border {
-          width: calc(100% + 4px);
-          height: calc(100% + 4px);
-        }
-        /* end avatar hexagon */
-
-        .hexagon-right {
-          top: 70%;
-          right: -16px;
-          width: 32px;
-          height: 36px;
-        }
-        .hexagon-middle {
-          top: 79%;
-          left: 75%;
-          opacity: 0.6;
-          width: 24.5px;
-          height: 27.55px;
-          z-index: 1;
-        }
-
-        .hexagon-bottom {
-          top: 50%;
-        }
-
-        /* plus */
-        .plus-top-group {
-          width: 50px;
-          height: 50px;
-          top: 15%;
-        }
-        .plus-bottom-group {
-          width: 40px;
-          height: 40px;
-        }
-        /* end plus */
-
-        /* square */
-
-        .square-xxlarge {
-          width: 29px;
-          height: 28px;
-          top: 75%;
-          left: 55%;
-        }
-        .square-xlarge {
-          width: 23px;
-          height: 23px;
-          top: 65%;
-          left: 85%;
-        }
-        .square-large {
-          width: 23px;
-          height: 23px;
-          bottom: 10%;
-          left: 77%;
-        }
-        .square-medium {
-          width: 17px;
-          height: 17px;
-          bottom: 5%;
-          right: 30%;
-        }
-        .square-small {
-          width: 10px;
-          height: 10px;
-          opacity: 0.2;
-          bottom: 12%;
-          left: 70%;
-        }
-        /* end square */
-
-        .content-section {
-          width: 100%;
-          top: 75%;
-          left: 50%;
-          width: 311px;
-          transform: translate(-50%, -20%);
-          gap: 1em;
-        }
-        .quote {
-          font-size: 16px;
-          line-height: 24px;
-        }
-        .author-name {
-          font-size: 14px;
-          margin: 0;
-        }
-        .author-title {
-          font-size: 12px;
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .clip-hexagon {
+          clip-path: url("#hexagon");
         }
       }
     </style>
     <svg
       width="0"
       height="0"
-      style="position: absolute; top: -10000px; left: -10000px; z-index: -1"
+      class="absolute -top-[10000px] -left-[10000px] -z-10"
     >
       <defs>
         <clipPath id="hexagon" clipPathUnits="objectBoundingBox">
@@ -413,51 +54,92 @@
       </defs>
     </svg>
   </head>
-  <body>
-    <main class="main">
-      <section class="hexagon-avatar-wrapper">
-        <div class="hexagon-group">
-          <div class="hexagon-male">
-            <div class="hexagon-line"></div>
-            <div class="hexagon-padding"></div>
-            <div class="hexagon-image">
+  <body class="font-['Montserrat']">
+    <main class="w-full h-[100dvh] bg-[#029cf6] overflow-hidden relative">
+      <!-- Hexagon Avatars -->
+      <section
+        class="fixed top-[-15px] left-[-47px] z-30 sm:top-[87px] sm:left-[-67px]"
+      >
+        <div class="relative">
+          <!-- Male Hexagon -->
+          <div class="w-[297px] h-[337px] relative sm:w-[481px] sm:h-[546px]">
+            <div
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%+4px)] h-[calc(100%+4px)] bg-white clip-hexagon w-[calc(100%+32px)] h-[calc(100%+32px)]"
+            ></div>
+            <div
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%+30px)] h-[calc(100%+30px)] bg-[#029cf6] clip-hexagon"
+            ></div>
+            <div class="w-full h-full clip-hexagon">
               <img
                 loading="lazy"
                 src="./assets/male-doctor.jpg"
                 alt="maleDoctor"
+                class="w-full h-full object-cover select-none sm:ml-[40px]"
               />
             </div>
-            <div class="hexagon-top"></div>
+            <div
+              class="absolute top-[13%] left-[90%] w-[56px] h-[63px] bg-[#07f9fe] opacity-30 clip-hexagon sm:top-[1%] sm:left-[80%] sm:w-[147px] sm:h-[166px]"
+            ></div>
           </div>
-          <div class="hexagon-famale-position">
-            <div class="hexagon-famale">
-              <div class="hexagon-border"></div>
-              <div class="hexagon-image">
+
+          <!-- Female Hexagon -->
+          <div
+            class="absolute bottom-[-7em] right-[-3em] sm:bottom-[-10em] sm:right-[-5em]"
+          >
+            <div class="w-[226px] h-[256px] relative sm:w-[365px] sm:h-[414px]">
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%+4px)] h-[calc(100%+4px)] bg-[#20e6f4] clip-hexagon sm:w-[calc(100%+6px)] sm:h-[calc(100%+6px)]"
+              ></div>
+              <div class="w-full h-full clip-hexagon">
                 <img
                   loading="lazy"
                   src="./assets/female-doctor.jpg"
                   alt="famaleDoctor"
+                  class="w-full h-full object-cover select-none"
                 />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="content-section">
-        <p class="quote">
+
+      <!-- Content Section -->
+      <section
+        class="fixed top-[75%] left-1/2 w-[311px] -translate-x-1/2 -translate-y-[20%] flex flex-col gap-4 z-20 sm:top-[20%] sm:left-[55%] sm:w-[352px] sm:translate-x-0 sm:translate-y-0 sm:gap-[12em]"
+      >
+        <p
+          class="text-[16px] leading-[24px] font-semibold text-white antialiased sm:text-[28px] sm:leading-[44px]"
+        >
           Tôi không nghĩ mình đang khác đi, bởi tôi là một người sống khá đơn
           giản. Tôi biết những người yêu mến tôi là vì sự chân thật và giản dị.
         </p>
-        <div class="author-info">
-          <h2 class="author-name">Thu Quỳnh</h2>
-          <span class="author-title">Bác sĩ</span>
+        <div>
+          <h2
+            class="text-[14px] font-bold text-[#ffde05] uppercase antialiased sm:text-[28px] sm:mb-[5px]"
+          >
+            Thu Quỳnh
+          </h2>
+          <span class="text-white text-[12px] antialiased sm:text-[18px]"
+            >Bác sĩ</span
+          >
         </div>
       </section>
 
-      <div class="hexagon-middle"></div>
-      <div class="hexagon-right"></div>
+      <!-- Decorative Elements -->
+      <div
+        class="fixed top-[79%] left-[75%] w-[24.5px] h-[27.55px] bg-[#032184] opacity-60 z-10 clip-hexagon sm:top-[55%] sm:left-[75%] sm:w-[64px] sm:h-[72px]"
+      ></div>
+      <div
+        class="fixed top-[70%] right-[-16px] w-[32px] h-[36px] bg-[#032184] opacity-[0.26] z-10 clip-hexagon sm:top-[30%] sm:right-[-42.25px] sm:w-[85px] sm:h-[96px]"
+      ></div>
+      <div
+        class="fixed top-1/2 left-[-10%] w-[120vw] aspect-square bg-[#032184] opacity-30 clip-hexagon z-10 sm:top-[60%]"
+      ></div>
 
-      <div class="plus-top-group">
+      <!-- Plus -->
+      <div
+        class="fixed w-[50px] h-[50px] top-[15%] right-[-1%] sm:w-[128px] sm:h-[128px] sm:top-[5%]"
+      >
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g
@@ -480,7 +162,9 @@
           </g>
         </svg>
       </div>
-      <div class="plus-bottom-group">
+      <div
+        class="fixed w-[40px] h-[40px] bottom-[-1%] left-1/2 opacity-60 z-10 sm:w-[105px] sm:h-[105px]"
+      >
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g
@@ -503,14 +187,23 @@
           </g>
         </svg>
       </div>
-      <div class="square square-xxlarge"></div>
-      <div class="square square-xlarge"></div>
-      <div class="square square-large"></div>
-      <div class="square square-medium"></div>
-      <div class="square square-small"></div>
 
-      <div class="plus-bottom"></div>
-      <div class="hexagon-bottom"></div>
+      <!-- Squares -->
+      <div
+        class="fixed rounded-[20%] bg-[#f4f6f6] w-[29px] h-[28px] opacity-30 top-[75%] left-[55%] sm:w-[75px] sm:h-[76px] sm:top-[46%] sm:left-[51%]"
+      ></div>
+      <div
+        class="fixed rounded-[20%] bg-[#f4f6f6] w-[23px] h-[23px] opacity-10 top-[65%] left-[85%] sm:w-[61px] sm:h-[60px] sm:top-[25%] sm:left-[85%]"
+      ></div>
+      <div
+        class="fixed rounded-[20%] bg-[#f4f6f6] w-[23px] h-[23px] opacity-20 bottom-[10%] left-[77%] sm:w-[60px] sm:h-[60px] sm:bottom-[23%] sm:left-[80%]"
+      ></div>
+      <div
+        class="fixed rounded-[20%] bg-[#f4f6f6] w-[17px] h-[17px] opacity-30 bottom-[5%] right-[30%] z-10 sm:w-[45px] sm:h-[45px] sm:bottom-[16%]"
+      ></div>
+      <div
+        class="fixed rounded-[20%] bg-[#f4f6f6] w-[10px] h-[10px] opacity-20 bottom-[12%] left-[70%] z-10 sm:w-[26px] sm:h-[26px] sm:opacity-30 sm:bottom-[27%]"
+      ></div>
     </main>
   </body>
 </html>

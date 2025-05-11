@@ -1,0 +1,364 @@
+:root {
+  --background-primary: #029cf6;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.main {
+  overflow: hidden;
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--background-primary);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hexagon-avatar-wrapper {
+  position: fixed;
+  top: 87px;
+  left: -67px;
+  z-index: 3;
+}
+.hexagon-group {
+  position: relative;
+}
+.hexagon-famale-position {
+  position: absolute;
+  bottom: -10em;
+  right: -5em;
+}
+.hexagon-male {
+  width: 481px;
+  height: 546px;
+  position: relative;
+}
+.hexagon-famale {
+  width: 365px;
+  height: 414px;
+  position: relative;
+}
+.hexagon-border {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #20e6f4;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  -webkit-clip-path: url("#hexagon");
+  clip-path: url("#hexagon");
+}
+.hexagon-padding {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--background-primary);
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  -webkit-clip-path: url("#hexagon");
+  clip-path: url("#hexagon");
+}
+.hexagon-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 32px);
+  height: calc(100% + 32px);
+  background-color: #fcfefe;
+  -webkit-clip-path: url("#hexagon");
+  clip-path: url("#hexagon");
+}
+.hexagon-image {
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: url("#hexagon");
+  clip-path: url("#hexagon");
+}
+.hexagon-famale .hexagon-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+}
+.hexagon-male .hexagon-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: 40px;
+  -webkit-user-drag: none;
+}
+
+/* plus */
+.plus-top-group {
+  position: fixed;
+  width: 128px;
+  height: 128px;
+  top: 5%;
+  right: -1%;
+}
+.plus-bottom-group {
+  position: fixed;
+  width: 105px;
+  height: 105px;
+  bottom: -1%;
+  left: 50%;
+  opacity: 0.6;
+  z-index: 1;
+}
+/* end plus */
+
+/* square */
+.square {
+  position: fixed;
+  border-radius: 20%;
+  background-color: #f4f6f6;
+}
+.square-xxlarge {
+  width: 75px;
+  height: 76px;
+  opacity: 0.3;
+  top: 43%;
+  left: 51%;
+}
+.square-xlarge {
+  width: 61px;
+  height: 60px;
+  opacity: 0.1;
+  top: 20%;
+  left: 80%;
+}
+.square-large {
+  width: 60px;
+  height: 60px;
+  opacity: 0.2;
+  bottom: 20%;
+  left: 77%;
+}
+.square-medium {
+  width: 45px;
+  height: 45px;
+  bottom: 10%;
+  opacity: 0.3;
+  right: 30%;
+  z-index: 1;
+}
+.square-small {
+  width: 26px;
+  height: 26px;
+  opacity: 0.3;
+  bottom: 23%;
+  left: 70%;
+  z-index: 1;
+}
+/* end square */
+
+/* content */
+.content-section {
+  position: fixed;
+  top: 20%;
+  left: 55%;
+  max-width: 352px;
+  display: flex;
+  flex-direction: column;
+  gap: 12em;
+  z-index: 2;
+}
+.quote {
+  font-size: 28px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  font-weight: 600;
+  line-height: 44px;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+.author-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffde05;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+.author-title {
+  color: #ffff;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+/* end content */
+
+.hexagon-top {
+  position: absolute;
+  top: 1%;
+  left: 80%;
+  background-color: #07f9fe;
+  opacity: 0.3;
+  width: 147px;
+  height: 166px;
+  -webkit-clip-path: url("#hexagon");
+  clip-path: url("#hexagon");
+}
+.hexagon-middle {
+  position: fixed;
+  top: 50%;
+  left: 80%;
+  background-color: #032184;
+  opacity: 0.3;
+  width: 64px;
+  height: 72px;
+  z-index: 1;
+  -webkit-clip-path: url("#hexagon");
+  clip-path: url("#hexagon");
+}
+.hexagon-right {
+  position: fixed;
+  top: 30%;
+  right: -42.25px;
+  background-color: #032184;
+  opacity: 0.26;
+  width: 85px;
+  height: 96px;
+  z-index: 1;
+  -webkit-clip-path: url("#hexagon");
+  clip-path: url("#hexagon");
+}
+.hexagon-bottom {
+  position: fixed;
+  top: 60%;
+  left: -10%;
+  background-color: #032184;
+  opacity: 0.3;
+  width: 120vw;
+  aspect-ratio: 1;
+  -webkit-clip-path: url("#hexagon");
+  clip-path: url("#hexagon");
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  /* avatar hexagon */
+  .hexagon-avatar-wrapper {
+    top: -15px;
+    left: -47px;
+  }
+  .hexagon-famale-position {
+    bottom: -7em;
+    right: -3em;
+  }
+  .hexagon-male {
+    width: 297px;
+    height: 337px;
+  }
+  .hexagon-famale {
+    width: 226px;
+    height: 256px;
+    box-sizing: border-box;
+  }
+  .hexagon-top {
+    top: 13%;
+    left: 90%;
+    width: 56px;
+    height: 63px;
+  }
+  .hexagon-border {
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+  }
+  /* end avatar hexagon */
+
+  .hexagon-right {
+    top: 70%;
+    right: -16px;
+    width: 32px;
+    height: 36px;
+  }
+  .hexagon-middle {
+    top: 79%;
+    left: 75%;
+    opacity: 0.6;
+    width: 24.5px;
+    height: 27.55px;
+    z-index: 1;
+  }
+
+  .hexagon-bottom {
+    top: 50%;
+  }
+
+  /* plus */
+  .plus-top-group {
+    width: 50px;
+    height: 50px;
+    top: 15%;
+  }
+  .plus-bottom-group {
+    width: 40px;
+    height: 40px;
+  }
+  /* end plus */
+
+  /* square */
+
+  .square-xxlarge {
+    width: 29px;
+    height: 28px;
+    top: 75%;
+    left: 55%;
+  }
+  .square-xlarge {
+    width: 23px;
+    height: 23px;
+    top: 65%;
+    left: 85%;
+  }
+  .square-large {
+    width: 23px;
+    height: 23px;
+    bottom: 10%;
+    left: 77%;
+  }
+  .square-medium {
+    width: 17px;
+    height: 17px;
+    bottom: 5%;
+    right: 30%;
+  }
+  .square-small {
+    width: 10px;
+    height: 10px;
+    opacity: 0.2;
+    bottom: 12%;
+    left: 70%;
+  }
+  /* end square */
+
+  .content-section {
+    width: 100%;
+    top: 75%;
+    left: 50%;
+    width: 311px;
+    transform: translate(-50%, -20%);
+    gap: 1em;
+  }
+  .quote {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .author-name {
+    font-size: 14px;
+    margin: 0;
+  }
+  .author-title {
+    font-size: 12px;
+  }
+}
