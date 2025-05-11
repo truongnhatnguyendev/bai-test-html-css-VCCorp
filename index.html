@@ -2,7 +2,19 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="HandheldFriendly" content="true" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
     <title>HTML/CSS</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
@@ -13,20 +25,24 @@
       :root {
         --background-primary: #029cf6;
       }
-      html,
-      body {
+      * {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
+      }
+      html,
+      body {
         width: 100%;
         height: 100%;
-        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+        -webkit-text-size-adjust: 100%;
       }
       .main {
         overflow: hidden;
         width: 100%;
-        height: 100vh;
-        font-family: "Montserrat", sans-serif;
+        height: 100dvh;
         background-color: var(--background-primary);
+        -webkit-tap-highlight-color: transparent;
       }
 
       .hexagon-avatar-wrapper {
@@ -46,10 +62,6 @@
       .hexagon-male {
         width: 481px;
         height: 546px;
-        /* width: 100%;
-        max-width: 320px;
-        max-height: 364px;
-        aspect-ratio: 1; */
         position: relative;
       }
       .hexagon-famale {
@@ -65,6 +77,7 @@
         background-color: #20e6f4;
         width: calc(100% + 6px);
         height: calc(100% + 6px);
+        -webkit-clip-path: url("#hexagon");
         clip-path: url("#hexagon");
       }
       .hexagon-padding {
@@ -75,6 +88,7 @@
         background-color: var(--background-primary);
         width: calc(100% + 30px);
         height: calc(100% + 30px);
+        -webkit-clip-path: url("#hexagon");
         clip-path: url("#hexagon");
       }
       .hexagon-line {
@@ -85,23 +99,27 @@
         width: calc(100% + 32px);
         height: calc(100% + 32px);
         background-color: #fcfefe;
+        -webkit-clip-path: url("#hexagon");
         clip-path: url("#hexagon");
       }
       .hexagon-image {
         width: 100%;
         height: 100%;
+        -webkit-clip-path: url("#hexagon");
         clip-path: url("#hexagon");
       }
       .hexagon-famale .hexagon-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        -webkit-user-drag: none;
       }
       .hexagon-male .hexagon-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         margin-left: 40px;
+        -webkit-user-drag: none;
       }
 
       /* plus */
@@ -118,7 +136,7 @@
         height: 105px;
         bottom: -1%;
         left: 50%;
-        opacity: 60%;
+        opacity: 0.6;
         z-index: 1;
       }
       /* end plus */
@@ -132,21 +150,21 @@
       .square-xxlarge {
         width: 75px;
         height: 76px;
-        opacity: 30%;
+        opacity: 0.3;
         top: 43%;
         left: 51%;
       }
       .square-xlarge {
         width: 61px;
         height: 60px;
-        opacity: 10%;
+        opacity: 0.1;
         top: 20%;
         left: 80%;
       }
       .square-large {
         width: 60px;
         height: 60px;
-        opacity: 20%;
+        opacity: 0.2;
         bottom: 20%;
         left: 77%;
       }
@@ -154,14 +172,14 @@
         width: 45px;
         height: 45px;
         bottom: 10%;
-        opacity: 30%;
+        opacity: 0.3;
         right: 30%;
         z-index: 1;
       }
       .square-small {
         width: 26px;
         height: 26px;
-        opacity: 30%;
+        opacity: 0.3;
         bottom: 23%;
         left: 70%;
         z-index: 1;
@@ -171,12 +189,12 @@
       /* content */
       .content-section {
         position: fixed;
-        top: 15%;
+        top: 20%;
         left: 55%;
         max-width: 352px;
         display: flex;
         flex-direction: column;
-        gap: 11em;
+        gap: 12em;
         z-index: 2;
       }
       .quote {
@@ -186,6 +204,7 @@
         font-weight: 600;
         line-height: 44px;
         color: #ffffff;
+        -webkit-font-smoothing: antialiased;
       }
       .author-name {
         font-size: 28px;
@@ -193,10 +212,12 @@
         color: #ffde05;
         margin-bottom: 5px;
         text-transform: uppercase;
+        -webkit-font-smoothing: antialiased;
       }
       .author-title {
         color: #ffff;
         font-size: 18px;
+        -webkit-font-smoothing: antialiased;
       }
       /* end content */
 
@@ -205,9 +226,10 @@
         top: 1%;
         left: 80%;
         background-color: #07f9fe;
-        opacity: 30%;
+        opacity: 0.3;
         width: 147px;
         height: 166px;
+        -webkit-clip-path: url("#hexagon");
         clip-path: url("#hexagon");
       }
       .hexagon-middle {
@@ -215,10 +237,11 @@
         top: 50%;
         left: 80%;
         background-color: #032184;
-        opacity: 30%;
+        opacity: 0.3;
         width: 64px;
         height: 72px;
         z-index: 1;
+        -webkit-clip-path: url("#hexagon");
         clip-path: url("#hexagon");
       }
       .hexagon-right {
@@ -226,10 +249,11 @@
         top: 30%;
         right: -42.25px;
         background-color: #032184;
-        opacity: 26%;
+        opacity: 0.26;
         width: 85px;
         height: 96px;
         z-index: 1;
+        -webkit-clip-path: url("#hexagon");
         clip-path: url("#hexagon");
       }
       .hexagon-bottom {
@@ -237,14 +261,15 @@
         top: 60%;
         left: -10%;
         background-color: #032184;
-        opacity: 30%;
+        opacity: 0.3;
         width: 120vw;
         aspect-ratio: 1;
+        -webkit-clip-path: url("#hexagon");
         clip-path: url("#hexagon");
         z-index: 1;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 640px) {
         /* avatar hexagon */
         .hexagon-avatar-wrapper {
           top: -15px;
@@ -284,7 +309,7 @@
         .hexagon-middle {
           top: 79%;
           left: 75%;
-          opacity: 59%;
+          opacity: 0.6;
           width: 24.5px;
           height: 27.55px;
           z-index: 1;
@@ -335,7 +360,7 @@
         .square-small {
           width: 10px;
           height: 10px;
-          opacity: 20%;
+          opacity: 0.2;
           bottom: 12%;
           left: 70%;
         }
@@ -362,8 +387,6 @@
         }
       }
     </style>
-  </head>
-  <body>
     <svg
       width="0"
       height="0"
@@ -373,22 +396,24 @@
         <clipPath id="hexagon" clipPathUnits="objectBoundingBox">
           <path
             d="M 0.070936 0.789641 
-               L 0.412808 0.96865 
-               C 0.47143 0.999544 0.527588 1.0 0.587194 0.96865 
-               L 0.929066 0.789641 
-               C 0.974879 0.76556 1.0 0.741027 1.0 0.675148 
-               L 1.0 0.321673 
-               C 1.0 0.257611 0.974385 0.23444 0.932517 0.212176 
-               L 0.589657 0.032259 
-               C 0.528574 0.0 0.469952 0.000456 0.410345 0.032259 
-               L 0.067487 0.212176 
-               C 0.025615 0.23444 0.0 0.257611 0.0 0.321673 
-               L 0.0 0.675148 
-               C 0.0 0.741027 0.025123 0.76556 0.070936 0.789641 Z"
+             L 0.412808 0.96865 
+             C 0.47143 0.999544 0.527588 1.0 0.587194 0.96865 
+             L 0.929066 0.789641 
+             C 0.974879 0.76556 1.0 0.741027 1.0 0.675148 
+             L 1.0 0.321673 
+             C 1.0 0.257611 0.974385 0.23444 0.932517 0.212176 
+             L 0.589657 0.032259 
+             C 0.528574 0.0 0.469952 0.000456 0.410345 0.032259 
+             L 0.067487 0.212176 
+             C 0.025615 0.23444 0.0 0.257611 0.0 0.321673 
+             L 0.0 0.675148 
+             C 0.0 0.741027 0.025123 0.76556 0.070936 0.789641 Z"
           />
         </clipPath>
       </defs>
     </svg>
+  </head>
+  <body>
     <main class="main">
       <section class="hexagon-avatar-wrapper">
         <div class="hexagon-group">
@@ -410,7 +435,7 @@
               <div class="hexagon-image">
                 <img
                   loading="lazy"
-                  src="./assets/famale-doctor.jpg"
+                  src="./assets/female-doctor.jpg"
                   alt="famaleDoctor"
                 />
               </div>
