@@ -17,7 +17,7 @@
 
     <title>HTML/CSS</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -37,6 +37,9 @@
         }
         .bg-white {
           background-color: #ffffff;
+        }
+        .font-montserrat {
+          font-family: "Montserrat", sans-serif;
         }
       }
     </style>
@@ -115,7 +118,7 @@
       </defs>
     </svg>
   </head>
-  <body class="font-['Montserrat']">
+  <body class="font-montserrat">
     <main class="w-full h-dvh bg-primary overflow-hidden">
       <!-- Hexagon Avatars -->
       <section
@@ -190,7 +193,8 @@
           >
             Thu Quỳnh
           </h2>
-          <span class="text-white text-[12px] antialiased sm:text-[18px]"
+          <span
+            class="text-white font-medium tracking-[0.06em] text-[12px] antialiased sm:text-[18px]"
             >Bác sĩ</span
           >
         </div>
