@@ -26,6 +26,18 @@
         .clip-hexagon {
           clip-path: url("#hexagon");
         }
+        .bg-primary {
+          background-color: #029cf6;
+        }
+        .bg-cyan {
+          background-color: #07f9fe;
+        }
+        .bg-indigo {
+          background-color: #032184;
+        }
+        .bg-white {
+          background-color: #ffffff;
+        }
       }
     </style>
     <svg
@@ -104,7 +116,7 @@
     </svg>
   </head>
   <body class="font-['Montserrat']">
-    <main class="w-full h-dvh bg-[#029cf6] overflow-hidden relative">
+    <main class="w-full h-dvh bg-primary overflow-hidden">
       <!-- Hexagon Avatars -->
       <section
         class="fixed -top-[27px] -left-[21px] z-30 sm:top-[87px] sm:-left-[67px]"
@@ -132,17 +144,17 @@
               />
             </div>
             <div
-              class="absolute top-[13%] left-[90%] w-[56px] h-[63px] bg-[#07f9fe] opacity-30 clip-hexagon sm:top-[1%] sm:left-[80%] sm:w-[147px] sm:h-[166px]"
+              class="absolute top-[13%] left-[90%] w-[56px] h-[63px] bg-cyan opacity-30 clip-hexagon sm:top-[1%] sm:left-[80%] sm:w-[147px] sm:h-[166px]"
             ></div>
           </div>
 
           <!-- Female Hexagon -->
           <div
-            class="absolute bottom-[-7em] right-[-3em] sm:bottom-[-10em] sm:right-[-5em]"
+            class="absolute -bottom-[7em] right-[-3em] sm:-bottom-[10em] sm:-right-[5em]"
           >
             <div class="w-[226px] h-[256px] relative sm:w-[365px] sm:h-[414px]">
               <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%+8px)] h-[calc(100%+8px)] bg-[#20e6f4] clip-hexagon sm:w-[calc(100%+12px)] sm:h-[calc(100%+12px)]"
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%+8px)] h-[calc(100%+8px)] bg-cyan clip-hexagon sm:w-[calc(100%+12px)] sm:h-[calc(100%+12px)]"
               ></div>
               <div class="w-full h-full clip-hexagon">
                 <img
@@ -186,13 +198,13 @@
 
       <!-- Decorative Elements -->
       <div
-        class="fixed top-[79%] left-[75%] w-[24.5px] h-[27.55px] bg-[#032184] opacity-60 z-10 clip-hexagon sm:top-[55%] sm:left-[75%] sm:w-[64px] sm:h-[72px]"
+        class="fixed top-[79%] left-[75%] w-[24.5px] h-[27.55px] bg-indigo opacity-60 z-10 clip-hexagon sm:top-[55%] sm:left-[75%] sm:w-[64px] sm:h-[72px]"
       ></div>
       <div
-        class="fixed top-[70%] right-[-16px] w-[32px] h-[36px] bg-[#032184] opacity-[0.26] z-10 clip-hexagon sm:top-[30%] sm:right-[-42.25px] sm:w-[85px] sm:h-[96px]"
+        class="fixed top-[70%] right-[-16px] w-[32px] h-[36px] bg-indigo opacity-[0.26] z-10 clip-hexagon sm:top-[30%] sm:right-[-42.25px] sm:w-[85px] sm:h-[96px]"
       ></div>
       <div
-        class="fixed top-1/2 -left-[22%] w-[150vw] aspect-square bg-[#032184] opacity-30 clip-hexagon z-10 sm:top-[60%]"
+        class="fixed top-1/2 -left-[22%] w-[150vw] aspect-square bg-indigo opacity-30 clip-hexagon z-10 sm:top-[60%]"
       ></div>
 
       <!-- Plus -->
@@ -249,19 +261,19 @@
 
       <!-- Squares -->
       <div
-        class="fixed rounded-[20%] bg-[#f4f6f6] w-[29px] h-[28px] opacity-30 top-[75%] left-[55%] sm:w-[75px] sm:h-[76px] sm:top-[46%] sm:left-[51%]"
+        class="fixed rounded-[20%] bg-white w-[29px] h-[28px] opacity-30 top-[75%] left-[55%] sm:w-[75px] sm:h-[76px] sm:top-[46%] sm:left-[51%]"
       ></div>
       <div
-        class="fixed rounded-[20%] bg-[#f4f6f6] w-[23px] h-[23px] opacity-10 top-[65%] left-[85%] sm:w-[61px] sm:h-[60px] sm:top-[25%] sm:left-[85%]"
+        class="fixed rounded-[20%] bg-white w-[23px] h-[23px] opacity-10 top-[65%] left-[85%] sm:w-[61px] sm:h-[60px] sm:top-[25%] sm:left-[85%]"
       ></div>
       <div
-        class="fixed rounded-[20%] bg-[#f4f6f6] w-[23px] h-[23px] opacity-20 bottom-[10%] left-[80%] sm:w-[60px] sm:h-[60px] sm:bottom-[23%]"
+        class="fixed rounded-[20%] bg-white w-[23px] h-[23px] opacity-20 bottom-[10%] left-[80%] sm:w-[60px] sm:h-[60px] sm:bottom-[23%]"
       ></div>
       <div
-        class="fixed rounded-[20%] bg-[#f4f6f6] w-[17px] h-[17px] opacity-30 bottom-[5%] right-[31%] z-10 sm:w-[45px] sm:h-[45px] sm:bottom-[16%]"
+        class="fixed rounded-[20%] bg-white w-[17px] h-[17px] opacity-30 bottom-[5%] right-[31%] z-10 sm:w-[45px] sm:h-[45px] sm:bottom-[16%]"
       ></div>
       <div
-        class="fixed rounded-[20%] bg-[#f4f6f6] w-[10px] h-[10px] opacity-20 bottom-[12%] left-[70%] z-10 sm:w-[26px] sm:h-[26px] sm:opacity-30 sm:bottom-[25%]"
+        class="fixed rounded-[20%] bg-white w-[10px] h-[10px] opacity-20 bottom-[12%] left-[70%] z-10 sm:w-[26px] sm:h-[26px] sm:opacity-30 sm:bottom-[25%]"
       ></div>
     </main>
   </body>
